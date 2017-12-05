@@ -21,13 +21,14 @@ public class MainActivity extends Activity {
     private EditText mTxtValue1;
     private EditText mTxtValue2;
 
-
     private TextView mTxtResult;
 
     private float mValue1;
     private float mValue2;
 
-    /** Called when the activity is first created. */
+    /**
+     * Called when the activity is first created.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,8 +78,11 @@ public class MainActivity extends Activity {
         mBtnDivide.setOnClickListener(listener);
     }
 
+    /**
+     * This listener will be called when the user presses the Snackbar's action.
+     * It simply clears the result TextView
+     */
     private class MyErrorListener implements OnClickListener {
-
         @Override
         public void onClick(View v) {
             TextView t = findViewById(R.id.txtResult);
@@ -86,6 +90,10 @@ public class MainActivity extends Activity {
         }
     }
 
+    /**
+     * This method adds the numbers in their TextViews
+     * @return result
+     */
     private float addValues () {
         float toRet = -1;
         try {
@@ -103,23 +111,10 @@ public class MainActivity extends Activity {
         return toRet;
     }
 
-    private float multiplyValues () {
-        float toRet = -1;
-        try {
-            mValue1 = Float.valueOf(mTxtValue1.getText().toString());
-            mValue2 = Float.valueOf(mTxtValue2.getText().toString());
-
-            toRet = mValue1 * mValue2;
-        } catch (NumberFormatException ne) {
-            Log.e(LOG_TAG, "Empty values");
-            Snackbar.make(findViewById(this, R.id.llMain), R.string.exception_empty, LENGTH_LONG)
-                    .setAction("Ok", new MyErrorListener())
-                    .setActionTextColor(Color.RED)
-                    .show();
-        }
-        return toRet;
-    }
-
+    /**
+     * This method subtracts the numbers in their TextViews
+     * @return result
+     */
     private float subtractValues () {
         float toRet = -1;
         try {
@@ -137,6 +132,31 @@ public class MainActivity extends Activity {
         return toRet;
     }
 
+    /**
+     * This method multiplies the numbers in their TextViews
+     * @return result
+     */
+    private float multiplyValues () {
+        float toRet = -1;
+        try {
+            mValue1 = Float.valueOf(mTxtValue1.getText().toString());
+            mValue2 = Float.valueOf(mTxtValue2.getText().toString());
+
+            toRet = mValue1 * mValue2;
+        } catch (NumberFormatException ne) {
+            Log.e(LOG_TAG, "Empty values");
+            Snackbar.make(findViewById(this, R.id.llMain), R.string.exception_empty, LENGTH_LONG)
+                    .setAction("Ok", new MyErrorListener())
+                    .setActionTextColor(Color.RED)
+                    .show();
+        }
+        return toRet;
+    }
+
+    /**
+     * This method divides the numbers in their TextViews
+     * @return result
+     */
     private float divideValues () {
         float toRet = -1;
         try {
@@ -162,6 +182,10 @@ public class MainActivity extends Activity {
         return toRet;
     }
 
+    /**
+     * Util method that allows to hide the keyboard after the user presses a Button
+     * @param v the current View
+     */
     private void hideKeyboard(View v) {
         if (v != null) {
             InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
