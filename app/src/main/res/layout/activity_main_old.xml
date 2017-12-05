@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="3sp"
+        android:text="@string/hello"
+        android:textSize="35dp" />
+    <EditText
+        android:id="@+id/value1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint1"
+        android:inputType="text"
+        android:textSize="20dp" >
+    </EditText>
+    <EditText
+        android:id="@+id/value2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint2"
+        android:inputType="text"
+        android:textSize="20dp" >
+    </EditText>
+    <FrameLayout
+        android:id="@+id/FrameLayout01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3sp" >
+        <LinearLayout
+            android:id="@+id/LinearLayout02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2sp" >
+            <TextView
+                android:id="@+id/resultLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resultLabel"
+                android:textSize="25dp" >
+            </TextView>
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:textSize="15sp"
+                android:textStyle="bold" >
+            </TextView>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/LinearLayout03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/addValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:text="@string/add"
+            android:textSize="20dp"></Button>
+
+        <Button
+            android:id="@+id/subtractValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="60dp"
+            android:text="@string/subtract"
+            android:textSize="20dp"></Button>
+
+        <Button
+            android:id="@+id/multiplyValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="60dp"
+            android:text="@string/multiply"
+            android:textSize="20dp"></Button>
+
+        <Button
+            android:id="@+id/divideValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:text="@string/divide"
+            android:textSize="20dp"></Button>
+    </LinearLayout>
+</LinearLayout>

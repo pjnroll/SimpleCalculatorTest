@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SimpleAndroidCalculator</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="hello_world">Ciao Mondo!</string>
+    <string name="hello">Android Simple Calculator</string>
+    <string name="hint1">Primo valore..</string>
+    <string name="hint2">Secondo valore..</string>
+    <string name="resultLabel">Risultato: </string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">x</string>
+    <string name="divide">/</string>
+    <string name="instructions">Istruzioni</string>
+    <string name="instructions_lorem">Lorem ipsum dolor sit amet,
+consectetur adipiscing elit. Ut euismod, nibh sed commodo varius
+, ligula odio pulvinar nisl, sit amet bibendum magna tellus in
+magna. Nunc a massa tellus. Fusce dignissim mollis neque eget
+vulputate. Lorem ipsum dolor sit amet.</string>
+    <string name="back">Indietro</string>
+
+</resources>
