@@ -21,4 +21,5 @@ consectetur adipiscing elit. Ut euismod, nibh sed commodo varius
 magna. Nunc a massa tellus. Fusce dignissim mollis neque eget
 vulputate. Lorem ipsum dolor sit amet.</string>
     <string name="back">Back</string>
+    <string name="hintOp">op</string>
 </resources>
