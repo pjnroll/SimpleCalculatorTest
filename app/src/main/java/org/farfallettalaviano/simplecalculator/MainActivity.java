@@ -95,7 +95,7 @@ public class MainActivity extends Activity {
             toRet = mValue1 + mValue2;
         } catch (NumberFormatException ne) {
             Log.e(LOG_TAG, "Empty values");
-            Snackbar.make(findViewById(this, R.id.llMain), "Empty values", LENGTH_LONG)
+            Snackbar.make(findViewById(this, R.id.llMain), R.string.exception_empty, LENGTH_LONG)
                     .setAction("Ok", new MyErrorListener())
                     .setActionTextColor(Color.RED)
                     .show();
@@ -112,7 +112,7 @@ public class MainActivity extends Activity {
             toRet = mValue1 * mValue2;
         } catch (NumberFormatException ne) {
             Log.e(LOG_TAG, "Empty values");
-            Snackbar.make(findViewById(this, R.id.llMain), "Empty values", LENGTH_LONG)
+            Snackbar.make(findViewById(this, R.id.llMain), R.string.exception_empty, LENGTH_LONG)
                     .setAction("Ok", new MyErrorListener())
                     .setActionTextColor(Color.RED)
                     .show();
@@ -129,7 +129,7 @@ public class MainActivity extends Activity {
             toRet = mValue1 - mValue2;
         } catch (NumberFormatException ne) {
             Log.e(LOG_TAG, "Empty values");
-            Snackbar.make(findViewById(this, R.id.llMain), "Empty values", LENGTH_LONG)
+            Snackbar.make(findViewById(this, R.id.llMain), R.string.exception_empty, LENGTH_LONG)
                     .setAction("Ok", new MyErrorListener())
                     .setActionTextColor(Color.RED)
                     .show();
@@ -148,13 +148,13 @@ public class MainActivity extends Activity {
             toRet = mValue1 / mValue2;
         } catch (NumberFormatException ne) {
             Log.e(LOG_TAG, "Empty values");
-            Snackbar.make(findViewById(this, R.id.llMain), "Empty values", LENGTH_LONG)
+            Snackbar.make(findViewById(this, R.id.llMain), R.string.exception_empty, LENGTH_LONG)
                     .setAction("Ok", new MyErrorListener())
                     .setActionTextColor(Color.RED)
                     .show();
         } catch (ArithmeticException ae) {
             Log.e(LOG_TAG, "Divide by 0");
-            Snackbar.make(findViewById(this, R.id.llMain), "Can't divide by 0", LENGTH_LONG)
+            Snackbar.make(findViewById(this, R.id.llMain), R.string.exception_dividebyzero, LENGTH_LONG)
                     .setAction("Ok", new MyErrorListener())
                     .setActionTextColor(Color.RED)
                     .show();

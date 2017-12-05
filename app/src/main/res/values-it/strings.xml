@@ -11,6 +11,11 @@
     <string name="multiply">x</string>
     <string name="divide">/</string>
     <string name="instructions">Istruzioni</string>
+
+    <string name="exception_empty">Campo vuoto</string>
+    <string name="exception_dividebyzero">Impossibile dividere per 0</string>
+
+
     <string name="instructions_lorem">Lorem ipsum dolor sit amet,
 consectetur adipiscing elit. Ut euismod, nibh sed commodo varius
 , ligula odio pulvinar nisl, sit amet bibendum magna tellus in
